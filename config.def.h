@@ -7,14 +7,14 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { //"monospace:size=10",
-					"WenQuanYi Micro Hei:size=12:type=Regular:antialias=true:autohint=true",
+					"WenQuanYi Micro Hei:size=11:type=Regular:antialias=true:autohint=true",
 					"Symbols Nerd Font:pixelsize=14:type=2048-em:antialias=true:autohint=true"};
-static const unsigned int baralpha = 0xc0;	/* 状态栏透明度 */
+static const unsigned int baralpha = 0xcc;	/* 状态栏透明度 */
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { "#bbbbbb", "#333333", "#444444" },
-	[SchemeSel]  = { "#ffffff", "#37474F", "#42A5F5" },
+	[SchemeNorm] = { "#ECEFF4", "#4C566A", "#4C566A" },
+	[SchemeSel]  = { "#d8dee9", "#2e3440", "#2e3440" },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
