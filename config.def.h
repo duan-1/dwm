@@ -1,34 +1,28 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const Gap default_gap        = {.isgap = 1, .realgap = 10, .gappx = 10};
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { //"monospace:size=10",
-					"WenQuanYi Micro Hei:size=10:type=Regular:antialias=true:autohint=true",
+					"WenQuanYi Micro Hei:size=12:type=Regular:antialias=true:autohint=true",
 					"Symbols Nerd Font:pixelsize=14:type=2048-em:antialias=true:autohint=true"};
-static const char col_gray1[]       = "#3F72AF";
-static const char col_gray2[]       = "#DBE2EF";
-static const char col_gray3[]       = "#F9F7F7";
-static const char col_gray4[]       = "#FFFFFF";
-static const char col_cyan[]        = "#112D4E";
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0xc0;	/* 状态栏透明度 */
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { "#bbbbbb", "#333333", "#444444" },
+	[SchemeSel]  = { "#ffffff", "#37474F", "#42A5F5" },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
-
 /* tagging */
-static const char *tags[] = { "", "", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", ""};
 
 static const Rule rules[] = {
 	/* xprop(1):
