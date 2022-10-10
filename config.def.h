@@ -63,6 +63,9 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "rofi", "-modes", "\"drun,ssh\"", "-show",  NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *volumeup[]  = {"amixer", "-M", "set", "PCM", "2%+"};
+static const char *volumedown[]  = {"amixer", "-M", "set", "PCM", "2%-"};
+static const char *volumemute[]  = {"amixer", "set", "PCM", "toggle"};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -93,6 +96,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = GAP_RESET } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
+  { 0,                            0x1008ff13,spawn,          {.v = volumeup} },
+  { 0,                            0x1008ff11,spawn,          {.v = volumedown} },
+  { 0,                            0x1008ff12,spawn,          {.v = volumemute} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
